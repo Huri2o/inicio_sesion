@@ -16,10 +16,12 @@
 
 
 -- Volcando estructura de base de datos para prueba
+DROP DATABASE IF EXISTS `prueba`;
 CREATE DATABASE IF NOT EXISTS `prueba` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `prueba`;
 
 -- Volcando estructura para tabla prueba.tabla_prueba
+DROP TABLE IF EXISTS `tabla_prueba`;
 CREATE TABLE IF NOT EXISTS `tabla_prueba` (
   `id` int(11) unsigned zerofill NOT NULL AUTO_INCREMENT,
   `usuario` varchar(50) DEFAULT '',
@@ -27,7 +29,10 @@ CREATE TABLE IF NOT EXISTS `tabla_prueba` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla prueba.tabla_prueba: ~2 rows (aproximadamente)
+REPLACE INTO `tabla_prueba` (`id`, `usuario`, `password`) VALUES
+	(00000000001, 'admin', '827ccb0eea8a706c4c34a16891f84e7b'),
+	(00000000002, 'admin2', '827ccb0eea8a706c4c34a16891f84e7b');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
