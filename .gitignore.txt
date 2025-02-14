@@ -1,0 +1,17 @@
+# Archivos de configuración
+.env
+
+# Directorios de dependencias
+/vendor/
+/node_modules/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE
+.idea/
+.vscode/
+
+# Archivos de logs
+*.log
