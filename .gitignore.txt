@@ -15,3 +15,5 @@ Thumbs.db
 
 # Archivos de logs
 *.log
+
+db.php
