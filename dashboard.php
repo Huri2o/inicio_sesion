@@ -64,4 +64,4 @@ if (!isset($_SESSION['usuario'])) {
         </div>
     </section>
 </body>
-</html>
+</html>adelante
