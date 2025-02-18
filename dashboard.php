@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['usuario'])) {
-    header("Location: ../index.html");
+    header("Location: index.html");
     exit();
 }
 ?>
@@ -14,5 +14,6 @@ if (!isset($_SESSION['usuario'])) {
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <h1>Bienvenido al Dashboard</h1>
 </body>
 </html>
