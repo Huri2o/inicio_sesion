@@ -5,9 +5,61 @@
     box-sizing: border-box;
 }
 
+/* Estilos generales */
 html, body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Fondo solo en el dashboard */
+.dashboard-page {
     width: 1440px;
-    min-height: 4146px; /* Altura mínima de la imagen */
+    min-height: 4146px;
     background: url('../images/home1.svg') no-repeat center top;
     background-size: cover;
+}
+
+/* Estilos del login */
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f5f5f5; /* Color de fondo neutro */
+}
+
+.login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background: #218838;
 }
