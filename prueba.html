@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página con 6 secciones</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Responsive Design</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
-  <style>
-    /* Se elimina el margen y padding para que las secciones ocupen todo el ancho de la pantalla */
-    body, html {
-      margin: 0;
-      padding: 0;
-    }
-    /* Cada sección tendrá un ancho fijo de 1920px y se centra horizontalmente */
-    section {
-      width: 1920px;
-      margin: 0 auto;
-    }
-    /* Dimensiones específicas para cada sección */
-    #seccion1 { height: 1020px; background-color: #f8b195; }
-    #seccion2 { height: 250px; background-color: #f67280; }
-    #seccion3 { height: 580px; background-color: #c06c84; }
-    #seccion4 { height: 473px; background-color: #6c5b7b; }
-    #seccion5 { height: 310px; background-color: #355c7d; }
-    #seccion6 { height: 1010px; background-color: #99b898; }
-	#seccion7 { height: 503px; background-color: #FFFF00; }
 
-  </style>
 </head>
 <body>
-  <section id="seccion1"></section>
-  <section id="seccion2"></section>
-  <section id="seccion3"></section>
-  <section id="seccion4"></section>
-  <section id="seccion5"></section>
-  <section id="seccion6"></section>
-  <section id="seccion7"></section> 
+    <header>
+        <div class="container">
+            <h1>Ejemplo de Diseño Responsive</h1>
+        </div>
+    </header>
 
+    <div class="container">
+        <section class="intro">
+            <h2>Bienvenido al Ejemplo de Diseño Responsive</h2>
+            <p>Este ejemplo muestra cómo distribuir textos en diferentes secciones de una página web y cómo hacer que se adapten correctamente a distintos tamaños de pantalla. Utiliza técnicas modernas como Grid, Flexbox y Media Queries.</p>
+        </section>
+
+        <section class="content-grid">
+            <div class="card">
+                <h3>Diseño Responsive</h3>
+                <p>El diseño responsive permite que tu sitio web se adapte perfectamente a cualquier dispositivo, desde computadoras de escritorio hasta teléfonos móviles.</p>
+            </div>
+            <div class="card">
+                <h3>CSS Grid</h3>
+                <p>CSS Grid es una técnica moderna que te permite crear layouts complejos de manera sencilla, organizando contenido en filas y columnas.</p>
+            </div>
+            <div class="card">
+                <h3>Flexbox</h3>
+                <p>Flexbox es ideal para distribuir elementos en una sola dimensión (fila o columna) y proporciona un gran control sobre el alineamiento y distribución.</p>
+            </div>
+        </section>
+
+        <section class="quote">
+            <p>"El diseño responsive no se trata solo de ajustar tamaños de pantalla, sino de crear experiencias que se adapten al contexto del usuario."</p>
+            <span>- Ethan Marcotte</span>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h3>Media Queries</h3>
+                <p>Las media queries permiten aplicar estilos específicos según las características del dispositivo, como el ancho de pantalla.</p>
+            </div>
+            <div class="feature">
+                <h3>Unidades Relativas</h3>
+                <p>Utilizar unidades como em, rem, % o vw/vh ayuda a crear diseños flexibles que se adaptan proporcionalmente al tamaño de pantalla.</p>
+            </div>
+            <div class="feature">
+                <h3>Imágenes Flexibles</h3>
+                <p>Las imágenes también deben adaptarse correctamente para evitar desbordamientos y mantener la armonía del diseño en cualquier dispositivo.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Este es un ejemplo creado para ayudarte a entender el diseño responsive. © 2025</p>
+        </div>
+    </footer>
 </body>
 </html>
-
