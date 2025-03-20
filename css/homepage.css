@@ -1,0 +1,726 @@
+/* styles.css */
+/* Primero, asegúrate de que la imagen de fondo tenga un z-index bajo */
+body {
+  background-image: url('homepage_img/imagenes\ negras.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  position: relative; /* Necesario para que el z-index funcione */
+  z-index: 1; /* Un valor bajo para estar detrás de todo */
+}
+
+/* Para las secciones principales, usa fondos con transparencia */
+.cards-section, 
+.weekly-plans-section, 
+.weekly-plan-selector, 
+.dish-info {
+  background-color: transparent !important; /* Completamente transparente */
+  position: relative; /* Para controlar el z-index */
+  z-index: 2 !important; /* Un valor mayor que el fondo */
+}
+
+/* Para las cards y elementos que necesitan su propio fondo */
+.card-custom,
+.plan-card,
+.dish-card,
+.info-list {
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+  /* Alternativamente, puedes usar un efecto de vidrio esmerilado (frosted glass) */
+  backdrop-filter: blur(5px); /* Añade un efecto de desenfoque detrás del elemento */
+  -webkit-backdrop-filter: blur(5px); /* Para compatibilidad con Safari */
+}
+
+/* Asegúrate de que la navbar tenga un fondo semi-transparente */
+.navbar-custom {
+  background-color: rgba(240, 255, 234, 0.8); /* El mismo color pero con transparencia */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.imagen_pre {
+  display: flex;
+  justify-content: center;
+  
+}
+header {
+    position: relative;
+    z-index: 3; /* Asegúrate de que sea mayor que el z-index de las imágenes */
+}
+.navbar-custom {
+    background-color: #F0FFEA; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+
+  .navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Hace que el icono sea más visible en fondos claros */
+}
+
+  .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 29px;
+    font-weight: bold;
+    color: #000000; /* Color del texto del logo */
+  }
+  
+  .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+    color: #000000 !important; /* Color del texto del menú */
+    font-weight: 500;
+    margin: 0 25px;
+  }
+  
+  /* Estilos base para los botones */
+  .btn-custom {
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #ffffff; /* Color del texto del botón */
+  }
+  
+  /* Botón de Log In */
+  .btn-login {
+    background-color: #ffffff00; /* Color del botón Log In */
+    color:#000000
+  }
+  
+  /* Botón de Sign Up */
+  .btn-signup {
+    background-color: #000000; 
+  }
+
+
+/* Estilos para la Hero Section */
+.hero-section .container {
+    position: relative;
+    z-index: 2; /* Colocamos el contenido por encima de las imágenes */
+    top: -100px;
+}
+
+.hero-section {
+    padding: 230px 0 !important;
+    background-color: #F0FFEA; /* Fondo similar al del navbar */
+    text-align: center; /* Centramos el texto */
+  }
+  
+  .hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 59px;
+    font-weight: 700; /* Bold */
+    margin-bottom: 20px;
+    margin-top: -40px;
+  }
+
+  .hero-title span{
+    font-family: 'Sansita Swashed', sans-serif;
+  }
+  
+  .hero-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 59px;
+    font-weight: 700; /* Regular */
+    margin-bottom: 20px;
+  }
+  
+  .hero-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 21px;
+    font-weight: 400; /* Regular */
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .btn-order {
+    background-color: #2E7D61;
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+
+/* Modificaciones para las imágenes de la hero section */
+.hero-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3; /* Aumentamos el z-index para que esté por encima del fondo */
+  pointer-events: none; /* Permite que los clics pasen a través de las imágenes */
+}
+
+/* Estilos base para las imágenes */
+.hero-image {
+  position: absolute;
+  width: auto;
+  height: 200px; /* Tamaño base */
+  object-fit: contain; /* Mantiene la proporción sin recortar */
+  opacity: 0.9; /* Aumentamos un poco la opacidad */
+  transition: all 0.3s ease; /* Animación suave para cambios de tamaño */
+}
+
+/* Posicionamiento de las imágenes */
+.hero-image-1 {
+  top: 45%;
+  left: 6%;
+  max-width: 15vw; /* Ancho máximo responsive basado en el viewport */
+  height: auto; /* Altura automática para mantener proporción */
+}
+
+.hero-image-2 {
+  top: 40%;
+  right: 4%;
+  max-width: 15vw;
+  height: auto;
+}
+
+.hero-image-3 {
+  bottom: 10%;
+  right: 25%;
+  width: 207px;
+  height: 244px;
+  max-width: 20vw;
+  max-height: 25vh;
+}
+
+.hero-image-4 {
+  bottom: 10%;
+  left: 25%;
+  width: 320px;
+  height: 257.18px;
+  max-width: 25vw;
+  max-height: 30vh;
+}
+
+
+
+/* Ajuste para el contenedor principal */
+.hero-section .container {
+  position: relative;
+  z-index: 4; /* Mayor que las imágenes para que el texto esté por encima */
+  top: 0; /* Quitamos el desplazamiento negativo para mejor posicionamiento */
+}
+
+/* Ajustamos el padding de la sección hero para mejor responsividad */
+.hero-section {
+  padding: 150px 0 200px;
+  position: relative;
+  overflow: hidden; /* Evitamos desbordamiento de imágenes */
+}
+
+
+/* Estilos para la sección de las ds */
+.cards-section {
+    margin-top: -100px; /* Espacio entre la Hero Section y las cards */
+    padding: 40px 0; /* Espaciado interno (opcional) */
+  }
+
+.card-custom {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #e0e0e0; /* Borde suave */
+    border-radius: 20px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 10px rgb(0, 0, 0); /* Sombra suave */
+    padding: 27px; /* Espaciado interno */
+    height: 220px; /* Asegura que todas las cards tengan la misma altura */
+    text-align: center; /* Centrar el texto */
+  }
+  
+  .card-title {
+    font-family: 'Poppins',sans-serif;
+    font-size: 37px;
+    font-weight: 550;
+    color: #000000; /* Color del título */
+    margin-bottom: 10px; /* Espaciado inferior */
+  }
+  
+  .card-text {
+    font-family: 'Poppins',sans-serif;
+    font-size: 22px;
+    color: #000000; /* Color del texto */
+    line-height: 1.5; /* Espaciado entre líneas */
+  }
+
+
+/* Estilos para la sección de "Weekly Plans" */
+.weekly-plans-section {
+    position: relative;
+    padding: 80px 0;
+    background-color: #ffffff;
+    text-align: center;
+    overflow: hidden; /* Evita cortes en la imagen */
+}
+
+.weekly-plans-title {
+    font-family: 'Sansita Swashed', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+.weekly-plans-title2 {
+  font-family: 'Sansita Swashed', sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.weekly-plans-image {
+  position: absolute; /* Posicionamos la imagen de forma absoluta */
+  top: 0;
+  right: 0;
+  height: 100%; /* La imagen ocupará toda la altura de la sección */
+  width: auto; /* Ajustamos el ancho automáticamente */
+  max-width: 50%; /* Limitamos el ancho al 50% del contenedor */
+  object-fit: cover; /* Aseguramos que la imagen cubra el espacio sin distorsionarse */
+  z-index: 1; /* Colocamos la imagen detrás del contenido */
+}
+
+.weekly-plans-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: #000000;
+    text-align: left; /* Alineamos el subtítulo a la izquierda */
+}
+
+.weekly-plans-list {
+    list-style-type: none; /* Quita los bullets de la lista */
+    padding-left: 0;
+    margin-bottom: 30px;
+    text-align: left; /* Alineamos la lista a la izquierda */
+}
+
+.weekly-plans-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px; /* Espacio para el ícono */
+}
+
+.weekly-plans-list li::before {
+    content: "✔"; /* Ícono de check (puedes usar un ícono personalizado) */
+    position: absolute;
+    left: 0;
+    color: #2E7D61; /* Color del ícono */
+    font-size: 20px;
+}
+
+.weekly-plans-buttons {
+    display: flex;
+    gap: 20px; /* Espacio entre los botones */
+    justify-content: flex-start; /* Alineamos los botones a la izquierda */
+}
+
+.btn-subscribe {
+    background-color: #2E7D61; /* Color de fondo para el botón Subscribe */
+    color: #ffffff;
+}
+
+.btn-order-once {
+    background-color: #000000; /* Color de fondo para el botón Order once */
+    color: #ffffff;
+}
+
+
+
+/* Estilos para la sección de "Weekly Plan Selector" */
+.weekly-plan-selector {
+    text-align: left; /* Alineamos el texto a la izquierda */
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 41px;
+    font-weight: 600;
+    text-align: left; /* Alineamos el título a la izquierda */
+}
+
+.section-title span {
+    font-family: 'Sansita Swashed', sans-serif;
+}
+
+.section-subtitle {
+    font-weight: bold;
+    font-size: 26px;
+    text-align: left; /* Alineamos el subtítulo a la izquierda */
+    padding: 10px;
+}
+
+.slider-container {
+    position: relative;
+    display: block; /* Cambiamos a block para que ocupe toda la anchura */
+    margin: 30px 0;
+    text-align: left; /* Alineamos el slider a la izquierda */
+}
+
+.slider-container input[type="range"] {
+    width: 80%; /* Ajusta este valor según el tamaño que desees */
+    max-width: 400px; /* Opcional: Limita el ancho máximo */
+}
+
+input[type="range"] {
+    width: 100%; /* Hacemos que el slider ocupe toda la anchura */
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #2E7D61;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#dishCount {
+    position: absolute;
+    top: -30px; /* Posición arriba del slider */
+    background: #000;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 19px;
+    transform: translateX(-50%); /* Centra el contador respecto al thumb */
+}
+
+.slider-info {
+    text-align: left; /* Alineamos el texto a la izquierda */
+    font-size: 19px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.plan-card {
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center; /* Centramos el contenido de la card */
+    max-width: 332px;
+}
+
+.plan-card h3 {
+    font-size: 37px;
+}
+
+.plan-card p {
+    font-size: 29px;
+    color: #333;
+}
+
+.plan-card p2 {
+    font-size: 25px;
+    color: #333;
+}
+
+.plan-card hr {
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+    background: #ddd;
+}
+
+.btn-order {
+    background-color: #2E7D61;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos Informacion*/
+.dish-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    font-family: sans-serif;
+}
+  
+.dish-card {
+    width: 45%;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+.dish-card img {
+    width: 184px;
+    max-height: 175px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+  
+.dish-card h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+    font-weight: 550;
+    margin-bottom: 10px;
+}
+
+.dish-card h2 span {
+    font-size: 16px;
+}
+
+.dish-card h2 span span{
+    font-size: 8px;
+}
+  
+.nutritional-info span {
+    margin-right: 10px;
+    padding: 5px ;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+  
+.ingredients ul, .nutritional-facts, .allergens {
+    margin-top: 10px;
+}
+  
+.add-to-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+  
+.add-to-cart button {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+  
+.info-list {
+    width: 45%;
+    text-align: center;
+}
+  
+.info-list ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.info-list li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+  
+.info-list img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.info-list h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 59px;
+    font-weight: 550;
+}
+
+.info-list h2 span {
+    font-family: 'Sansita Swashed', sans-serif;
+}
+
+.info-list p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+}
+
+
+
+  /* Ajustes responsive más específicos */
+@media (max-width: 9000px){
+  .weekly-plans-title2{
+    display: none !important;
+  }
+}
+@media (max-width: 1199.99px) {
+
+  .hero-image {
+    height: 180px;
+  }
+  
+  .hero-image-3 {
+    width: 180px;
+    height: 220px;
+  }
+  
+  .hero-image-4 {
+    width: 280px;
+    height: 230px;
+  }
+  .card-title{
+    font-size: 29px !important;
+  }
+  .card-text{
+    font-size: 19px !important;
+  }
+  .imagen_pre{
+    margin: 0%;
+    padding: 0%;
+  }
+  .hero-title{
+    font-size: 45px;
+  }
+  .hero-subtitle{
+    font-size: 45px;
+  }
+  .hero-text{
+    font-size: 19px;
+  }
+  .hero-section{
+    margin-top: -100px;
+  }
+  
+}
+@media (max-width: 1024px){
+  .imagen_pre{
+    display: none !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  
+  .hero-title{
+    font-size: 40px;
+  }
+  .hero-subtitle{
+    font-size: 40px;
+  }
+  .hero-text {
+    font-size: 16px;
+  }
+  .hero-images {
+      display: none; /* Ocultamos las imágenes en pantallas pequeñas */
+  }
+  .btn-order{
+    padding: 7px !important;
+    font-size: 15px !important;
+  }
+  .weekly-plans-image{
+    display: none !important;
+  }
+  .weekly-plans-title{
+    display: none !important;
+  }
+ .weekly-plans-title2{
+  display: block !important; 
+  font-size: 40px;
+ }
+ .weekly-plans-subtitle{
+  font-size: 22px !important;
+ }
+ .weekly-plans-list li {
+  font-size: 16px;
+}
+.btn-subscribe{
+  padding: 7px !important;
+  font-size: 15px !important;
+}
+.btn-order-once{
+  padding: 5px !important;
+  font-size: 15px !important;
+}
+}
+
+@media (max-width: 768px) {
+  .weekly-plans-title {
+    font-size: 24px;
+}
+
+.weekly-plans-list li {
+    font-size: 16px;
+}
+
+.weekly-plans-buttons {
+    flex-direction: column; /* Botones en columna en móviles */
+    gap: 10px;
+}
+
+.col-lg-6.order-lg-2.order-1 {
+    text-align: center; /* Centramos la imagen en móviles */
+} 
+  .hero-image-1, .hero-image-2 {
+    max-width: 25vw;
+  }
+  
+  .hero-image-3 {
+    width: 120px;
+    height: 150px;
+    right: 15%;
+    bottom: 15%;
+  }
+  
+  .hero-image-4 {
+    width: 180px;
+    height: 150px;
+    left: 15%;
+    bottom: 15%;
+  }
+  .hero-title{
+    font-size: 30px !important;
+  }
+  .hero-subtitle{
+    font-size: 30px !important;
+  }
+  .hero-text{
+    font-size: 12px !important;
+  }
+  .btn-order{
+    padding: 5px !important;
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-images {
+    display: flex; /* Cambiamos a flex para móviles */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  
+  .hero-image {
+    position: relative;
+    width: 45%;
+    height: auto;
+    margin: 10px 0;
+    max-height: 120px;
+  }
+  
+  .hero-image-1, .hero-image-2, .hero-image-3, .hero-image-4 {
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    max-width: 45%;
+  }
+}
+

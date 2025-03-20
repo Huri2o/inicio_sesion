@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header como en la imagen</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/D_productsImages/favicon.png"/>
+
+  <!-- Bootstrap CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sansita+Swashed:wght@300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Enlazar el archivo CSS personalizado -->
+  <link href="../css/homepage.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">Komi</a>
+
+        <!-- Menú de navegación -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto"> <!-- mx-auto centra el menú -->
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Guide</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Assistant</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Wiki</a>
+            </li>
+          </ul>
+
+          <!-- Botones de inicio de sesión y registro -->
+          <div class="d-flex">
+            <a href="#" class="btn btn-custom btn-login me-2">Log In</a>
+            <a href="#" class="btn btn-custom btn-signup">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!-- Hero Section -->
+<section class="hero-section">
+      <div class="hero-images">
+        <img src="../assets/images/homepage_img/cubiertos.svg" alt="Imagen 1" class="hero-image hero-image-1">
+        <img src="../assets/images/homepage_img/cajita.svg" alt="Imagen 2" class="hero-image hero-image-2">
+        <img src="../assets/images/homepage_img/librito.svg" alt="Imagen 3" class="hero-image hero-image-3">
+        <img src="../assets/images/homepage_img/sartensito.svg" alt="Imagen 4" class="hero-image hero-image-4">
+      </div>
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Texto de la Hero Section -->
+        <div class="col-lg-8 mx-auto text-center"> <!-- Centramos el texto -->
+          <h1 class="hero-title">We <span>Know</span> About <span>Food</span>:</h1>
+          <h2 class="hero-subtitle">Delicious And Made For You.</h2>
+          <p class="hero-text">
+            Discover Unique Recipes, Healthy Dishes, Personalized Diet Plans<br>
+            And Complete Ingredient Information. Eating Well Has Never<br>
+            Been Easier.
+          </p>
+          <div class="hero-cta">
+            <a href="#" class="btn btn-custom btn-order">Order once</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+    <!-- Sección de las cards -->
+<section class="cards-section">
+    <div class="container">
+      <div class="row">
+        <!-- Card 1: Market -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card-custom">
+            <div class="card-body">
+              <h2 class="card-title">Market</h2>
+              <p class="card-text">Looking for a specific product? We have it.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 2: Weekly Plans -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card-custom">
+            <div class="card-body">
+              <h2 class="card-title">Weekly Plans</h2>
+              <p class="card-text">Your diet will be fabulous thanks to our experts.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 3: Meal Kits -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card-custom">
+            <div class="card-body">
+              <h2 class="card-title">Meal Kits</h2>
+              <p class="card-text">Want to try something new? Our special kits are for you.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 4: Wiki -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card-custom">
+            <div class="card-body">
+              <h2 class="card-title">Wiki</h2>
+              <p class="card-text">Calories, recipes, or tips for any dish or ingredient? BINGO.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="imagen_pre">
+    <img src="homepage_img/PRE-View.png">
+  </div>
+   
+<!-- Sección de "Weekly Plans" -->
+<section class="weekly-plans-section">
+    <div class="container-fluid"> <!-- Cambiamos a container-fluid para que ocupe todo el ancho -->
+        <div class="row align-items-center">
+            <!-- Texto de la sección -->
+            <div class="col-lg-6">
+                <h3 class="weekly-plans-title2">Weekly Plans</h3>
+                <h3 class="weekly-plans-subtitle">All you have to do is choose the dishes you want to eat the following week and our kitchen team will get to work.</h3>
+                <ul class="weekly-plans-list">
+                    <li>Designed by our team of chefs and nutritionists</li>
+                    <li>Hearty diet, elaborated with the best local and seasonal raw material.</li>
+                    <li>your dishes, you can keep them in the fridge for 8 days as the first day.</li>
+                    <li>Your dishes will arrive wherever you are, totally fresh in a single delivery.</li>
+                </ul>
+                <div class="weekly-plans-buttons">
+                    <a href="#" class="btn btn-custom btn-subscribe">Subscribe</a>
+                    <a href="#" class="btn btn-custom btn-order-once">Order once</a>
+                </div>
+            </div>
+            <!-- Imagen de la sección (opcional) -->
+            <div class="col-lg-6 p-0"> <!-- Añadimos p-0 para quitar el padding -->
+                <h2 class="weekly-plans-title">Weekly Plans</h2>
+                <img src="homepage_img/bola_verde_arriba_de_Weekly Plan.svg" alt="Weekly Plans" class="img-fluid weekly-plans-image">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Sección de "Weekly Plan Selector" -->
+<section class="weekly-plan-selector">
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda: Contenido (excepto la card) -->
+            <div class="col-lg-8">
+                <h2 class="section-title">Choose your <span>Weekly Plan</span></h2>
+                <p class="section-subtitle">Select the number of dishes</p>
+
+                <!-- Slider -->
+                <div class="slider-container">
+                    <input type="range" id="dishRange" min="5" max="20" value="8" step="1" oninput="updatePlan()">
+                    <span id="dishCount">8</span>
+                </div>
+
+                <p class="slider-info">Choose the dishes you want to receive each week.</p>
+            </div>
+
+            <!-- Columna derecha: Card -->
+            <div class="col-lg-4">
+                <div class="plan-card">
+                    <h3><span id="dishCountCard">8</span> Dishes</h3>
+                    <p id="monthlyPrice">$52.00 / month</p>
+                    <p2 id="dishPrice">$7.00 / Dish</p2>
+                    <hr>
+                    <button class="btn-order">Order once</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dish-info">
+    <div class="dish-card">
+      <h2><img src="homepage_img/coreano.png" alt="Korean Sauce Chicken">Korean Sauce Chicken
+        <div class="nutritional-info">
+            <span>549 </span><span> kcal</span>
+            <span>50 gr Proteínas</span>
+            <span>22 gr Grasas</span>
+          </div>
+      </h2>
+
+      <p>An Asian-inspired dish, rich in protein with a perfect balance of umami and sweet flavors.</p>
+      <div class="nutritional-info">
+        <span>549 kcal</span>
+        <span>50 gr Proteínas</span>
+        <span>22 gr Grasas</span>
+      </div>
+      <div class="ingredients">
+        <h3>Main Ingredients:</h3>
+        <ul>
+          <li>Chicken - <span>High in protein.</span> </li>
+          <li> Soy sauce, teriyaki, ketjap manis - <span>Add umami and sweetness (contain soy and gluten).</span> </li>
+          <li>Ginger and sesame - <span>Aromatic, antioxidant-rich, and high in healthy fats.</span></li>
+          <li>Potato, pak choi, and cherry tomatoes - <span>Source of fiber, vitamins, and freshness.</span> </li>
+          <li>Olive oil, salt, and pepper - <span> For a balanced flavor.</span></li>
+        </ul>
+      </div>
+      <div class="nutritional-facts">
+        <h3>Nutritional Facts (450g):</h3>
+        <p>🔥 549 kcal | 🍗 50.4g protein | 🥑 22g fat | 🍞 36.9g carbohydrates | 🧂 10.3g salt</p>
+      </div>
+      <div class="allergens">
+        <h3>Allergens:</h3>
+        <p> Soy, gluten, sesame. May contain traces of fish, nuts, dairy, and celery.</p>
+      </div>
+      <p>Perfect to enjoy with rice or quinoa. Intense flavor and nutritious! </p>
+      <div class="add-to-cart">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+        <button>AÑADIR AL CARRITO - $6</button>
+      </div>
+    </div>
+    <div class="info-list">
+      <h2>All the <span>Information</span></h2>
+      <h2>About our <span>Dishes</span></h2>
+      <p>with our little information cards you will be able to know:</p>
+      <ul>
+        <li><img src="homepage_img/chec negro.png" alt="Icono Nutrición"> Información Nutricional</li>
+        <li><img src="homepage_img/chec negro.png" alt="Icono Ingredientes"> Ingredientes</li>
+        <li><img src="homepage_img/chec negro.png" alt="Icono Alérgenos"> Alérgenos</li>
+      </ul>
+    </div>
+  </section>
+<script>
+    function updatePlan() {
+    let dishRange = document.getElementById("dishRange");
+    let dishCount = document.getElementById("dishCount");
+    let dishCountCard = document.getElementById("dishCountCard");
+    let monthlyPrice = document.getElementById("monthlyPrice");
+    let dishPrice = document.getElementById("dishPrice");
+
+    // Obtener el valor actual del slider
+    let value = dishRange.value;
+
+    // Actualizar el texto del contador
+    dishCount.innerText = value;
+    dishCountCard.innerText = value;
+
+    // Calcular el precio mensual y por plato
+    let pricePerDish = 7.00;
+    let totalPrice = value * pricePerDish;
+
+    // Actualizar los precios
+    monthlyPrice.innerText = `$${totalPrice.toFixed(2)} / month`;
+    dishPrice.innerText = `$${pricePerDish.toFixed(2)} / Dish`;
+
+    // Mover el contador junto con el selector
+    let sliderWidth = dishRange.offsetWidth; // Ancho total del slider
+    let thumbPosition = (value - dishRange.min) / (dishRange.max - dishRange.min); // Posición relativa del thumb
+    let thumbOffset = thumbPosition * sliderWidth; // Posición en píxeles
+
+    dishCount.style.left = `${thumbOffset}px`; // Mueve el contador
+    window.addEventListener("resize", updatePlan);
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const quantitySpan = document.querySelector('.add-to-cart span');
+  const addButton = document.querySelector('.add-to-cart button:nth-child(3)');
+  const subtractButton = document.querySelector('.add-to-cart button:first-child');
+  const addToCartButton = document.querySelector('.add-to-cart button:last-child');
+  let quantity = 1;
+
+  // Actualiza el contador en el span
+  function updateQuantity() {
+    quantitySpan.textContent = quantity;
+  }
+
+  // Aumenta la cantidad
+  addButton.addEventListener('click', () => {
+    quantity++;
+    updateQuantity();
+  });
+
+  // Disminuye la cantidad (mínimo 1)
+  subtractButton.addEventListener('click', () => {
+    if (quantity > 1) {
+      quantity--;
+      updateQuantity();
+    }
+  });
+
+  // Lógica para añadir al carrito (puedes personalizar esto)
+  addToCartButton.addEventListener('click', () => {
+    // Aquí puedes añadir la lógica para agregar el plato al carrito
+    // Por ejemplo, puedes enviar una solicitud al servidor o actualizar el carrito localmente
+    console.log(`Añadiendo ${quantity} plato(s) al carrito.`);
+    // También puedes mostrar un mensaje al usuario
+    alert(`Se han añadido ${quantity} plato(s) al carrito.`);
+  });
+
+  // Inicializa el contador
+  updateQuantity();
+});
+</script>
+</body>
+</html>
