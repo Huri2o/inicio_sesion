@@ -33,6 +33,59 @@ File: scss
 /*============================================================== 
  flot chart
  ============================================================== */
+ body_i2{ 
+    background:transparent;
+}
+/* .card_i2 { 
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+} PARA FONDO*/
+.card_i2 { 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: tran;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: 1rem;
+}
+.text-reset {
+    --bs-text-opacity: 1;
+    color: inherit!important;
+}
+a_i2 { 
+    color: #5465ff;
+    text-decoration: none;
+}
+
+body-Cart{ 
+    background:#eee;
+}
+
+.card-Cart { 
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+
+.card-Cart { 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: 1rem;
+}
+
+.card-body-Cart { 
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.5rem 1.5rem;
+}
+
 .flot-chart {
   display: block;
   height: 300px; }
@@ -3372,18 +3425,13 @@ textarea.form-control-lg {
     display: block
 }
 .navbar {
-    position: fixed;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    width: 100%;
-    top: 0;
-    z-index: 20;
-    background: #fff; /* Añade un fondo para que sea visible */
-    left: 0;
+    padding-bottom: 0.5rem
 }
 .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
     display: flex;
@@ -9387,7 +9435,7 @@ select.form-select.form-control-line {
     font-size: 11px
 }
 .left-sidebar {
-    position: fixed;
+    position: absolute;
     width: 250px;
     height: 100%;
     top: 0px;
