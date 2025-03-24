@@ -48,8 +48,8 @@
 
           <!-- Botones de inicio de sesión y registro -->
           <div class="d-flex">
-            <a href="#" class="btn btn-custom btn-login me-2">Log In</a>
-            <a href="#" class="btn btn-custom btn-signup">Sign Up</a>
+            <a href="inicio.php" class="btn btn-custom btn-login me-2">Log In</a>
+            <a href="registro.php" class="btn btn-custom btn-signup">Sign Up</a>
           </div>
         </div>
       </div>
