@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="Komi"/>
+    <meta name="description" content="Komi"/>
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Komi</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/D_productsImages/favicon.png"/>
+    <!-- Custom CSS -->
+    <link href="../assets/libs/flot/css/float-chart.css" rel="stylesheet" />
+    <link href="../css/history.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .nutrition-dashboard {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .nutrition-dashboard-controls {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .nutrition-dashboard-controls button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #2e7d61;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .nutrition-dashboard-controls button:hover {
+            background-color: #959895;
+            transform: scale(1.05);
+        }
+        .nutrition-dashboard-controls button.active {
+            background-color: #959895;
+        }
+        .nutrition-metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+
+           
+        }
+        .nutrition-metric-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .nutrition-metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .nutrition-metric-card h2 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+        }
+        .nutrition-chart-container {
+            position: relative;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full" data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full" class="mini-sidebar">
+      
+      <header class="topbar" data-navbarbg="skin5">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+          <div class="navbar-header expand-logo" data-logobg="skin5">
+            
+            
+            
+            <a class="navbar-brand" href="index.html">
+              
+              <b class="logo-icon ps-2">
+                
+                
+                <img src="../assets/images/D_productsImages/logo-icon.png" alt="homepage" class="light-logo" width="25">
+              </b>
+              
+              
+              <span class="logo-text ms-2">
+                
+                <img src="../assets/images/D_productsImages/logo-text.svg" alt="homepage" class="light-logo">
+              </span>
+              
+              
+              
+              
+              
+
+              
+              
+            </a>
+            
+            
+            
+            
+            
+            
+            <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+          </div>
+          
+          
+          
+          <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+            
+            
+            
+            <ul class="navbar-nav float-start me-auto">
+              <li class="nav-item d-none d-lg-block">
+                <a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a>
+              </li>
+              
+              
+              
+
+              
+              
+              
+              <li class="nav-item search-box search-box">
+                <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-magnify fs-4"></i></a>
+                <form class="app-search position-absolute">
+                  <input type="text" class="form-control" placeholder="Search &amp; enter">
+                  <a class="srh-btn"><i class="mdi mdi-window-close"></i></a>
+                </form>
+              </li>
+            </ul>
+            
+            
+            
+            <ul class="navbar-nav float-end">
+              
+              
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="toggleImage(this)">
+                    <!-- Imagen inicial -->
+                    <img src="../assets/images/D_productsImages/Notification.png" alt="Notifications" width="24" height="24" id="notificationImage">
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                </ul>
+            </li>
+              
+              
+              
+              
+              
+              
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <!-- Replace the bell icon with an image -->
+                  <img src="../assets/images/D_productsImages/Message.png" alt="Notifications" width="24" height="24">
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+              </ul>
+          </li>
+              
+              
+              
+
+              
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <!-- Replace the bell icon with an image -->
+                <img src="../assets/images/D_productsImages/Buy.png" alt="Notifications" width="24" height="24">
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+            </ul>
+        </li>
+              
+        <li class="nav-item dropdown">
+          <a class="
+              nav-link
+              dropdown-toggle
+              text-muted
+              waves-effect waves-dark
+              pro-pic
+            " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../assets/images/D_productsImages/users/1.jpg" alt="user" class="rounded-circle" width="31">
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-account me-1 ms-1"></i> My Profile</a>
+            <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-wallet me-1 ms-1"></i> My Balance</a>
+            <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-email me-1 ms-1"></i> Inbox</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-settings me-1 ms-1"></i> Account
+              Setting</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off me-1 ms-1"></i> Logout</a>
+            <div class="dropdown-divider"></div>
+            <div class="ps-4 p-10">
+              <a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded text-white">View Profile</a>
+            </div>
+          </ul>
+        </li>
+              
+              
+              
+            </ul>
+          </div>
+        </nav>
+      </header>
+       
+      <aside class="left-sidebar" data-sidebarbg="skin5">
+        
+        <div class="scroll-sidebar">
+        
+            <nav class="sidebar-nav">
+              <ul id="sidebarnav" class="pt-4 in">
+                <li class="sidebar-item ">
+                  <a class="sidebar-link waves-effect waves-dark sidebar-link active" href="D_Products.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Products</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link waves-effect waves-dark sidebar-link" href="M_kits.html" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">Meal Kits</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link waves-effect waves-dark sidebar-link" href="suscription.html" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">Subscription</span></a>
+                </li>
+                <li class="sidebar-item selected">
+                  <a class="sidebar-link waves-effect waves-dark sidebar-link" href="history.html" aria-expanded="false"><i class="mdi mdi-border-inside"></i><span class="hide-menu">History</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Soon</span></a>
+                  <ul aria-expanded="false" class="collapse first-level">
+                    <li class="sidebar-item">
+                      <a href="form-basic.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Form Basic </span></a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a href="form-wizard.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Form Wizard </span></a>
+                    </li>
+                  </ul>
+                </li>
+            </nav>
+            
+          </div>
+        
+        </aside>
+
+
+
+      <div class="page-wrapper">
+        <div class="nutrition-dashboard">
+            <div class="nutrition-dashboard-controls">
+                <button id="weeklyBtn" class="active">Vista Semanal</button>
+                <button id="monthlyBtn">Vista Mensual</button>
+            </div>
+            <div id="metricsGrid" class="nutrition-metrics-grid">
+                <!-- Los gráficos se insertarán aquí dinámicamente -->
+                <p>Selecciona una vista para mostrar métricas</p>
+            </div>
+        </div>
+     </div>
+<script>
+const weeklyBtn = document.getElementById('weeklyBtn');
+const monthlyBtn = document.getElementById('monthlyBtn');
+const metricsGrid = document.getElementById('metricsGrid');
+
+weeklyBtn.addEventListener('click', () => {
+    weeklyBtn.classList.add('active');
+    monthlyBtn.classList.remove('active');
+    metricsGrid.innerHTML = '<p>Mostrando datos semanales...</p>';
+});
+
+monthlyBtn.addEventListener('click', () => {
+    monthlyBtn.classList.add('active');
+    weeklyBtn.classList.remove('active');
+    metricsGrid.innerHTML = '<p>Mostrando datos mensuales...</p>';
+});
+</script>
+
+    </div>
+
+
+
+
+    <script src="../js/D_products/jquery.min.js"></script>     
+    <script src="../js/D_products/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../js/D_products/sidebarmenu.js"></script>     <!-- menu interactivo(flechas) -->
+    <script src="../js/D_products/custom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <script>
+        // Datos de ejemplo (sustituir con datos reales del usuario)
+        const weeklyData = {
+            calorias: {
+                label: 'Calorías',
+                data: [2100, 1950, 2250, 2050, 2300, 2150, 1900],
+                labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
+                color: '#8884d8'
+            },
+            proteinas: {
+                label: 'Proteínas (g)',
+                data: [85, 75, 90, 80, 95, 88, 70],
+                labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
+                color: '#82ca9d'
+            },
+            carbohidratos: {
+                label: 'Carbohidratos (g)',
+                data: [250, 230, 270, 240, 290, 260, 210],
+                labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
+                color: '#ffc658'
+            },
+            grasasTotales: {
+                label: 'Grasas Totales (g)',
+                data: [70, 65, 75, 68, 80, 72, 60],
+                labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
+                color: '#ff7300'
+            },
+            grasasSaturadas: {
+                label: 'Grasas Saturadas (g)',
+                data: [25, 22, 28, 24, 30, 26, 20],
+                labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
+                color: '#ff0000'
+            },
+            grasasTrans: {
+                label: 'Grasas Trans (g)',
+                data: [5, 4, 6, 5, 7, 6, 4],
+                labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
+                color: '#bf0000'
+            },
+            fibra: {
+                label: 'Fibra (g)',
+                data: [15, 12, 18, 14, 20, 16, 10],
+                labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
+                color: '#00bf00'
+            },
+            azucares: {
+                label: 'Azúcares (g)',
+                data: [35, 30, 40, 36, 45, 38, 25],
+                labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
+                color: '#bf00bf'
+            }
+        };
+
+        const monthlyData = {
+            calorias: {
+                label: 'Calorías',
+                data: [14500, 15200, 14800, 15500],
+                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+                color: '#8884d8'
+            },
+            proteinas: {
+                label: 'Proteínas (g)',
+                data: [560, 590, 575, 600],
+                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+                color: '#82ca9d'
+            },
+            carbohidratos: {
+                label: 'Carbohidratos (g)',
+                data: [1750, 1850, 1800, 1900],
+                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+                color: '#ffc658'
+            },
+            grasasTotales: {
+                label: 'Grasas Totales (g)',
+                data: [480, 510, 495, 525],
+                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+                color: '#ff7300'
+            },
+            grasasSaturadas: {
+                label: 'Grasas Saturadas (g)',
+                data: [170, 180, 175, 190],
+                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+                color: '#ff0000'
+            },
+            grasasTrans: {
+                label: 'Grasas Trans (g)',
+                data: [30, 35, 32, 38],
+                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+                color: '#bf0000'
+            },
+            fibra: {
+                label: 'Fibra (g)',
+                data: [100, 110, 105, 115],
+                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+                color: '#00bf00'
+            },
+            azucares: {
+                label: 'Azúcares (g)',
+                data: [250, 270, 260, 280],
+                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+                color: '#bf00bf'
+            }
+        };
+
+        const metricas = [
+            'calorias', 'proteinas', 'carbohidratos', 
+            'grasasTotales', 'grasasSaturadas', 'grasasTrans', 
+            'fibra', 'azucares'
+        ];
+
+        let currentView = 'semanal';
+        const charts = {};
+
+        function createChart(metrica, data) {
+            const cardDiv = document.createElement('div');
+            cardDiv.className = 'nutrition-metric-card';
+            
+            const titleEl = document.createElement('h2');
+            titleEl.textContent = data.label;
+            
+            const canvasEl = document.createElement('canvas');
+            const chartContainer = document.createElement('div');
+            chartContainer.className = 'nutrition-chart-container';
+            chartContainer.appendChild(canvasEl);
+            
+            cardDiv.appendChild(titleEl);
+            cardDiv.appendChild(chartContainer);
+            
+            const chart = new Chart(canvasEl, {
+                type: 'bar',
+                data: {
+                    labels: data.labels,
+                    datasets: [{
+                        label: data.label,
+                        data: data.data,
+                        backgroundColor: data.color + '99',
+                        borderColor: data.color,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            return { cardDiv, chart };
+        }
+
+        function renderDashboard(viewMode) {
+            const metricsGrid = document.getElementById('metricsGrid');
+            metricsGrid.innerHTML = '';
+
+            metricas.forEach(metrica => {
+                const data = viewMode === 'semanal' ? weeklyData[metrica] : monthlyData[metrica];
+                const { cardDiv, chart } = createChart(metrica, data);
+                metricsGrid.appendChild(cardDiv);
+                charts[metrica] = chart;
+            });
+        }
+
+        // Eventos de botones
+        document.getElementById('weeklyBtn').addEventListener('click', () => {
+            if (currentView !== 'semanal') {
+                currentView = 'semanal';
+                renderDashboard('semanal');
+                document.getElementById('weeklyBtn').classList.add('active');
+                document.getElementById('monthlyBtn').classList.remove('active');
+            }
+        });
+
+        document.getElementById('monthlyBtn').addEventListener('click', () => {
+            if (currentView !== 'mensual') {
+                currentView = 'mensual';
+                renderDashboard('mensual');
+                document.getElementById('monthlyBtn').classList.add('active');
+                document.getElementById('weeklyBtn').classList.remove('active');
+            }
+        });
+
+        // Renderizar dashboard inicial
+        renderDashboard('semanal');
+    </script>
+</body>
+</html>
