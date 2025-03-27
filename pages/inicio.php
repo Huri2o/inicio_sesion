@@ -79,6 +79,6 @@ $conn->close();
       <p class="login-text">Don't have an account? <a href="registro.php">Sign up</a></p>
     </div>
   </div>
-
+<script></script>
 </body>
 </html>
