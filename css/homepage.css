@@ -36,6 +36,7 @@ body, html {
   /* Alternativamente, puedes usar un efecto de vidrio esmerilado (frosted glass) */
   backdrop-filter: blur(5px); /* Añade un efecto de desenfoque detrás del elemento */
   -webkit-backdrop-filter: blur(5px); /* Para compatibilidad con Safari */
+
 }
 
 /* Asegúrate de que la navbar tenga un fondo semi-transparente */
@@ -250,11 +251,13 @@ header {
   
   .card-title {
     font-family: 'Poppins',sans-serif;
-    font-size: 37px;
+    font-size: 33px;
     font-weight: 550;
     color: #000000; /* Color del título */
     margin-bottom: 10px; /* Espaciado inferior */
+    text-align: center;
   }
+  
   
   .card-text {
     font-family: 'Poppins',sans-serif;
@@ -905,9 +908,18 @@ input[type="range"]::-webkit-slider-thumb {
   font-size: 16px;
 }
 
-.weekly-plans-list-2 li {
-  font-size: 16px;
+.weekly-plans-list{
+  margin-bottom: 54px;
+}
+
+.weekly-plans-list-2 {
+  text-align: left;
+  margin-left: 350px;
   
+}
+
+.weekly-plans-list-2 li{
+  font-size: 16px;
 }
 
 
@@ -1006,10 +1018,6 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 16px;
 }
 
-.weekly-plans-buttons {
-    flex-direction: column; /* Botones en columna en móviles */
-    gap: 10px;
-}
 
 .col-lg-6.order-lg-2.order-1 {
     text-align: center; /* Centramos la imagen en móviles */
@@ -1044,6 +1052,46 @@ input[type="range"]::-webkit-slider-thumb {
     padding: 5px !important;
     font-size: 12px !important;
   }
+
+  .weekly-plans-title2{
+    text-align: left;
+   margin-left: 170px;
+  }
+
+  .weekly-plans-subtitle{
+    margin-left: -12px;
+  }
+
+  .weekly-plans-list{
+    margin-left: -12px;
+    margin-bottom: 55px;
+  }
+
+  .weekly-plans-list-2{
+    text-align: left;
+    margin-left: 300px;
+  }
+
+  .weekly-plans-buttons {
+    position: relative;
+}
+
+.btn-subscribe {
+    position: absolute;
+    left: 0;
+    margin-left: -10px;
+    padding: 5px !important;
+    font-size: 12px !important;
+}
+.btn-order-once{
+  position: absolute;
+    left: 2;
+    margin-left: 60px;
+    padding: 5px !important;
+    font-size: 12px !important;
+}
+
+
   .weekly-plan-selector {
     padding: 20px 0;
   }
@@ -1053,8 +1101,10 @@ input[type="range"]::-webkit-slider-thumb {
   .section-subtitle {
     font-size: 20px;
   }
+
+
   .slider-container input[type="range"] {
-    width: 100%;
+    width: 90%;
   }
   
   .dish-info {
@@ -1079,30 +1129,109 @@ input[type="range"]::-webkit-slider-thumb {
   
 }
 
-@media (max-width: 576px) {
-  .hero-images {
-    display: flex; /* Cambiamos a flex para móviles */
-    flex-wrap: wrap;
-    justify-content: space-around;
-    position: relative;
-    height: auto;
-    margin-bottom: 30px;
+@media (max-width: 600px) {
+  .weekly-plans-title {
+    font-size: 22px;
+  }
+
+  .weekly-plans-list li {
+    font-size: 14px;
+    margin-left: -25px;
+    max-width: 200px;
+  }
+
+  .col-lg-6.order-lg-2.order-1 {
+    text-align: center;
   }
   
-  .hero-image {
+  .weekly-plans-title2 {
+    font-size: 30px;
+    text-align: left;
+    margin-left: 130px;
+  }
+
+  .weekly-plans-subtitle{
+    font-size: 15px;
+    text-align: left;
+    margin-left: -10px;
+    max-width: 450px;
+  }
+
+  .weekly-plans-list{
+    text-align: left;
+    margin-bottom: 49px;
+  }
+
+  .weekly-plans-list-2 li{
+    font-size: 14px;
+    max-width: 200px;
+    margin-left: -70px;
+  }
+
+  .weekly-plans-buttons {
+    text-align: center;
+    position: static;
+  }
+
+  .btn-subscribe,
+  .btn-order-once {
     position: relative;
-    width: 45%;
-    height: auto;
-    margin: 10px 0;
-    max-height: 120px;
+    display: block;
+    margin: 10px auto;
+    
+    font-size: 12px !important;
+  }
+
+  .weekly-plan-selector {
+    padding: 15px 0;
+  }
+
+  .section-title {
+    font-size: 26px;
+    text-align: center;
+  }
+  .section-subtitle {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .slider-container input[type="range"] {
+    width: 90%;
   }
   
-  .hero-image-1, .hero-image-2, .hero-image-3, .hero-image-4 {
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    max-width: 45%;
+  .dish-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  .card {
+    padding: 10px;
+  }
+  .top_card h2 {
+    font-size: 20px;
+  }
+  .nutrition-info2 {
+    margin-left: 230px;
+    font-size: 12px;
+  }
+
+  .info-list h3{
+    margin-top: -40px;
+    text-align: center;
+    font-size: 40px;
+    margin-right: -100px;
+  }
+
+  .info-list h2 {
+    font-size: 27px;
+    margin-right: -20px;
+  }
+  .info-list p {
+    text-align: center;
+    margin-right: -160px;
+    font-size: 14px !important;
+  }  
+  .info-list li{
+    font-size: 20px;
   }
 }
 
