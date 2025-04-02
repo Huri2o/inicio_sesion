@@ -1,0 +1,231 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .background-image {
+    position: fixed; /* Para que ocupe toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Para que esté detrás del contenido */
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+}
+
+  /* Contenedor principal */
+  .container {
+    position: relative; /* Necesario para el z-index */
+    z-index: 1; /* Para que esté encima de la imagen de fondo */
+    /* Para centrar la card vertical y horizontalmente */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    /* Ocupa al menos la altura de la ventana */
+    min-height: 100vh;
+    margin-right: 100px;
+  }
+  
+  /* Card que contiene el formulario */
+  .card {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 30px;
+    width: 700px; /* Ajusta a tu preferencia */
+    height: 750px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+}
+  
+  /* Títulos */
+  .card h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 400;
+  }
+  .card h2 span {
+    color: #2E7D61;
+    font-weight: 550;
+  }
+  
+  .card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 55px;
+    color: #000000;
+    margin-bottom: 80px;
+    text-align: left;
+    font-weight: 525;
+  }
+  
+  /* Formulario */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"] {
+    padding: 10px;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    height: 50px;
+  }
+  
+  input:focus {
+    border-color: #2E7D61; /* Ajusta el color a tu preferencia */
+  }
+  
+  /* Agrupación de filas dentro del formulario */
+  .form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .form-row > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Link de contraseña olvidada */
+  .forgot-password {
+    font-size: 0.85rem;
+    color: #B5B5B5;
+    text-decoration: none;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  /* Botón de enviar */
+  .btn-submit {
+    background-color: #2E7D61; /* Color principal */
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 35px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 45%;
+  }
+  
+  .btn-submit:hover {
+    background-color: #2a7158; /* tono más oscuro al pasar el ratón */
+  }
+  
+  /* Texto para continuar con redes sociales */
+  .continue-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  /* Botones sociales */
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .social-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  /* Ajusta los colores según la red social */
+  .facebook {
+    background-color: #3b5998;
+  }
+  .facebook:hover {
+    background-color: #2d4373;
+  }
+  
+  .twitter {
+    background-color: #1da1f2;
+  }
+  .twitter:hover {
+    background-color: #0d95e8;
+  }
+  
+  .google {
+    background-color: #db4437;
+  }
+  .google:hover {
+    background-color: #c23321;
+  }
+  
+  /* Texto final para ir a "Sign in" */
+  .login-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .login-text a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .login-text a:hover {
+    text-decoration: underline;
+  }
+  

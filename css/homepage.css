@@ -1,13 +1,20 @@
 /* styles.css */
 /* Primero, asegúrate de que la imagen de fondo tenga un z-index bajo */
-body {
-  background-image: url('homepage_img/imagenes\ negras.png');
+body, html {
+  background-image: url('../images/homepage_img/imagenes\ negras.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   position: relative; /* Necesario para que el z-index funcione */
   z-index: 1; /* Un valor bajo para estar detrás de todo */
+  
+}
+
+@media (max-width: 1024px) {
+  body, html {
+    background-image: none;
+  }
 }
 
 /* Para las secciones principales, usa fondos con transparencia */
@@ -40,15 +47,24 @@ body {
 .imagen_pre {
   display: flex;
   justify-content: center;
-  
+  padding: 40px;
 }
+
+.imagen_pre img {
+  width: 70%; /* La imagen ocupará el 50% del ancho del contenedor padre (.imagen_pre) */
+  height: auto;
+}
+
 header {
     position: relative;
     z-index: 3; /* Asegúrate de que sea mayor que el z-index de las imágenes */
 }
+
+.logoa{
+  margin-left: -20px;
+}
 .navbar-custom {
     background-color: #F0FFEA; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
   }
 
   .navbar-toggler {
@@ -104,7 +120,7 @@ header {
 }
 
 .hero-section {
-    padding: 230px 0 !important;
+    padding: 210px 0 !important;
     background-color: #F0FFEA; /* Fondo similar al del navbar */
     text-align: center; /* Centramos el texto */
   }
@@ -218,7 +234,7 @@ header {
 
 /* Estilos para la sección de las ds */
 .cards-section {
-    margin-top: -100px; /* Espacio entre la Hero Section y las cards */
+  
     padding: 40px 0; /* Espaciado interno (opcional) */
   }
 
@@ -250,89 +266,123 @@ header {
 
 /* Estilos para la sección de "Weekly Plans" */
 .weekly-plans-section {
-    position: relative;
-    padding: 80px 0;
-    background-color: #ffffff;
-    text-align: center;
-    overflow: hidden; /* Evita cortes en la imagen */
+  position: relative;
+  padding: 80px 0;
+  background-color: #ffffff;
+  text-align: center;
+  overflow: hidden; /* Evita cortes en la imagen */
+  margin-left: 70px;
 }
 
 .weekly-plans-title {
-    font-family: 'Sansita Swashed', sans-serif;
-    font-size: 60px;
-    font-weight: 600;
-    color: #000000;
-    margin-bottom: 30px;
-    position: relative;
-    z-index: 2;
-}
-.weekly-plans-title2 {
   font-family: 'Sansita Swashed', sans-serif;
   font-size: 60px;
   font-weight: 600;
   color: #000000;
   margin-bottom: 30px;
+  margin-left: 260px;
   position: relative;
   z-index: 2;
 }
+.weekly-plans-title2 {
+font-family: 'Sansita Swashed', sans-serif;
+font-size: 60px;
+font-weight: 600;
+color: #000000;
+margin-bottom: 30px;
+position: relative;
+z-index: 2;
+margin-left: 30px;
+}
 
 .weekly-plans-image {
-  position: absolute; /* Posicionamos la imagen de forma absoluta */
-  top: 0;
-  right: 0;
-  height: 100%; /* La imagen ocupará toda la altura de la sección */
-  width: auto; /* Ajustamos el ancho automáticamente */
-  max-width: 50%; /* Limitamos el ancho al 50% del contenedor */
-  object-fit: cover; /* Aseguramos que la imagen cubra el espacio sin distorsionarse */
-  z-index: 1; /* Colocamos la imagen detrás del contenido */
+position: absolute; /* Posicionamos la imagen de forma absoluta */
+top: 0;
+right: 0;
+height: 100%; /* La imagen ocupará toda la altura de la sección */
+width: 35%; /* Ajustamos el ancho automáticamente */
+max-width: 50%; /* Limitamos el ancho al 50% del contenedor */
+object-fit: cover; /* Aseguramos que la imagen cubra el espacio sin distorsionarse */
+z-index: 1; /* Colocamos la imagen detrás del contenido */
 }
 
 .weekly-plans-subtitle {
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    color: #000000;
-    text-align: left; /* Alineamos el subtítulo a la izquierda */
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  color: #000000;
+  text-align: left; /* Alineamos el subtítulo a la izquierda */
+  margin-left: 30px;
+  margin-top: -30px;
+  margin-bottom: 30px;
 }
 
 .weekly-plans-list {
-    list-style-type: none; /* Quita los bullets de la lista */
-    padding-left: 0;
-    margin-bottom: 30px;
-    text-align: left; /* Alineamos la lista a la izquierda */
+  list-style-type: none; /* Quita los bullets de la lista */
+  margin-left: 30px;
+  margin-bottom: 40px;
+  text-align: left; /* Alineamos la lista a la izquierda */
+}
+
+.weekly-plans-list-2 {
+  list-style-type: none; /* Quita los bullets de la lista */
+  margin-left: 350px;
+  margin-top: -190px;
+  text-align: left; /* Alineamos la lista a la izquierda */
 }
 
 .weekly-plans-list li {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #000000;
-    margin-bottom: 15px;
-    position: relative;
-    padding-left: 30px; /* Espacio para el ícono */
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px; /* Espacio para el ícono */
+  width: 270px;
 }
 
 .weekly-plans-list li::before {
-    content: "✔"; /* Ícono de check (puedes usar un ícono personalizado) */
-    position: absolute;
-    left: 0;
-    color: #2E7D61; /* Color del ícono */
-    font-size: 20px;
+  content: "✔"; /* Ícono de check (puedes usar un ícono personalizado) */
+  position: absolute;
+  left: 0;
+  color: #2E7D61; /* Color del ícono */
+  font-size: 20px;
+}
+
+.weekly-plans-list-2 li {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px; /* Espacio para el ícono */
+  width: 270px;
+}
+
+.weekly-plans-list-2 li::before {
+  content: "✔"; /* Ícono de check (puedes usar un ícono personalizado) */
+  position: absolute;
+  left: 0;
+  color: #2E7D61; /* Color del ícono */
+  font-size: 20px;
 }
 
 .weekly-plans-buttons {
-    display: flex;
-    gap: 20px; /* Espacio entre los botones */
-    justify-content: flex-start; /* Alineamos los botones a la izquierda */
+  display: flex;
+  gap: 20px; /* Espacio entre los botones */
+  justify-content: flex-start; /* Alineamos los botones a la izquierda */
+  margin-left: 30px;
 }
 
 .btn-subscribe {
-    background-color: #2E7D61; /* Color de fondo para el botón Subscribe */
-    color: #ffffff;
+  background-color: #2E7D61; /* Color de fondo para el botón Subscribe */
+  color: #ffffff;
 }
 
 .btn-order-once {
-    background-color: #000000; /* Color de fondo para el botón Order once */
-    color: #ffffff;
+  background-color: #000000; /* Color de fondo para el botón Order once */
+  color: #ffffff;
 }
 
 
@@ -361,54 +411,73 @@ header {
     text-align: left; /* Alineamos el subtítulo a la izquierda */
     padding: 10px;
 }
-
-.slider-container {
-    position: relative;
-    display: block; /* Cambiamos a block para que ocupe toda la anchura */
-    margin: 30px 0;
-    text-align: left; /* Alineamos el slider a la izquierda */
+/* Card Styling */
+.card-slider {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
 }
+
+/* Card Content */
+.card-content1 {
+  text-align: center;
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  display: block;
+  margin: 30px 0;
+  text-align: left;
+  margin-left: 8%;
+}
+
 
 .slider-container input[type="range"] {
-    width: 80%; /* Ajusta este valor según el tamaño que desees */
-    max-width: 400px; /* Opcional: Limita el ancho máximo */
+  width: 90%;
+  max-width: 400px;
 }
 
+/* Slider Styles */
 input[type="range"] {
-    width: 100%; /* Hacemos que el slider ocupe toda la anchura */
-    -webkit-appearance: none;
-    appearance: none;
-    height: 8px;
-    background: #2E7D61;
-    border-radius: 5px;
-    outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: #2E7D61;
+  border-radius: 5px;
+  outline: none;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #000;
-    border-radius: 50%;
-    cursor: pointer;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 15px;
+  background: #000;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
+/* Dish Count Indicator */
 #dishCount {
-    position: absolute;
-    top: -30px; /* Posición arriba del slider */
-    background: #000;
-    color: #fff;
-    padding: 3px 10px;
-    border-radius: 10px;
-    font-size: 19px;
-    transform: translateX(-50%); /* Centra el contador respecto al thumb */
+  position: absolute;
+  top: -30px;
+  background: #000;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 19px;
+  transform: translateX(-50%);
 }
 
+/* Slider Info */
 .slider-info {
-    text-align: left; /* Alineamos el texto a la izquierda */
-    font-size: 19px;
-    color: #333;
-    margin-top: 10px;
+  text-align: left;
+  font-size: 19px;
+  color: #333;
+  margin-top: 10px;
 }
 
 .plan-card {
@@ -451,66 +520,83 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
 }
 
-/* Estilos Informacion*/
+
+/* Estilos para la sección de la card */
 .dish-info {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    font-family: sans-serif;
-}
-  
-.dish-card {
-    width: 45%;
-    border: 1px solid #ddd;
-    padding: 20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-  
-.dish-card img {
-    width: 184px;
-    max-height: 175px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-  
-.dish-card h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 27px;
-    font-weight: 550;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.dish-card h2 span {
-    font-size: 16px;
+/* Estilos para la card */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 562px;
+  padding: 20px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
 }
 
-.dish-card h2 span span{
-    font-size: 8px;
+.card-image {
+  border-radius: 15px;
+  width: 183px;
 }
-  
-.nutritional-info span {
-    margin-right: 10px;
-    padding: 5px ;
-    border: 1px solid #000000;
-    border-radius: 5px;
+
+.card-info {
+  margin-top: 15px;
 }
-  
-.ingredients ul, .nutritional-facts, .allergens {
-    margin-top: 10px;
+
+.top_card h2{
+  font-family: 'Poppins', sans-serif;
+  font-size: 27px;
+  text-align: right;
+  margin-top: -140px;
+  font-weight: 550;
 }
-  
+
+
+.nutrition-info2 {
+  font-size: 15px;
+  background-color: #efefef;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  margin: 20px 0;
+  margin-left: 183px;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.counter button {
+  background-color: #2E7D61;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
 .add-to-cart {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
+  background-color: #2E7D61;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 25px;
+  width: 100%;
+  cursor: pointer;
 }
-  
-.add-to-cart button {
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    cursor: pointer;
-}
+
   
 .info-list {
     width: 45%;
@@ -518,8 +604,10 @@ input[type="range"]::-webkit-slider-thumb {
 }
   
 .info-list ul {
+    justify-items: left;
     list-style: none;
     padding: 0;
+    margin-left: 80px;
 }
   
 .info-list li {
@@ -528,18 +616,31 @@ input[type="range"]::-webkit-slider-thumb {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
   
 .info-list img {
-    width: 20px;
-    margin-right: 10px;
+    width: 40px;
+    margin-right: 25px;
+}
+
+.info-list h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 59px;
+  font-weight: 550;
+  margin-top: -300px;
+  text-indent: 4rem;
+}
+
+.info-list h3 span {
+  font-family: 'Sansita Swashed', sans-serif;
 }
 
 .info-list h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 59px;
     font-weight: 550;
+    text-indent: 4rem;
 }
 
 .info-list h2 span {
@@ -549,9 +650,147 @@ input[type="range"]::-webkit-slider-thumb {
 .info-list p {
     font-family: 'Poppins', sans-serif;
     font-size: 21px;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 80px;
 }
 
 
+/* Footer General */
+.footer {
+    background-color: #2E7D61;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer__column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__column ul li {
+    margin-bottom: 10px;
+}
+
+.footer__column ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer__column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+
+.footer__logo::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #d0d0d0;
+}
+
+.footer__button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.footer__button:hover {
+    background-color: #222;
+}
+
+/* Footer Bottom */
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    border-top: 1px solid #c0c0c0;
+    padding-top: 15px;
+}
+
+/* Payment icons */
+.footer__payments {
+    display: flex;
+    gap: 15px;
+}
+
+.payment-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 1px;
+    border: 1px solid #cccccc00;
+    border-radius: 4px;
+    background-color: #f0f0f000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-button img {
+    height: 30px;
+    width: auto;
+}
+
+.payment-button:hover {
+    background-color: #e0e0e000;
+}
+
+/* Copyright */
+.footer__copy {
+    font-size: 14px;
+    color: #c0c0c0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+  
 
   /* Ajustes responsive más específicos */
 @media (max-width: 9000px){
@@ -602,7 +841,30 @@ input[type="range"]::-webkit-slider-thumb {
   .imagen_pre{
     display: none !important;
   }
+  .weekly-plans-image{
+    display: none !important;
+  }
+  .weekly-plans-title{
+    display: none !important;
+  }
+ .weekly-plans-title2{
+  display: block !important; 
+  font-size: 40px;
+  text-align: right;
+  margin-right: -25%;
+  margin-bottom: 70px;
+  
 }
+.weekly-plans-subtitle{
+  margin-right: -400px;
+  
+}
+
+.info-list{
+  margin-top: 150px;
+}
+}
+
 
 @media (max-width: 991.98px) {
   
@@ -619,34 +881,121 @@ input[type="range"]::-webkit-slider-thumb {
       display: none; /* Ocultamos las imágenes en pantallas pequeñas */
   }
   .btn-order{
-    padding: 7px !important;
-    font-size: 15px !important;
+    padding: 7px ;
+    font-size: 15px ;
   }
   .weekly-plans-image{
-    display: none !important;
+    display: none ;
   }
   .weekly-plans-title{
-    display: none !important;
+    display: none ;
   }
  .weekly-plans-title2{
-  display: block !important; 
+  display: block ; 
   font-size: 40px;
+  text-align: left;
+  margin-left: 31%;
  }
  .weekly-plans-subtitle{
-  font-size: 22px !important;
+  font-size: 22px ;
+  width: 600px;
  }
+
  .weekly-plans-list li {
   font-size: 16px;
 }
+
+.weekly-plans-list-2 li {
+  font-size: 16px;
+  
+}
+
+
 .btn-subscribe{
-  padding: 7px !important;
-  font-size: 15px !important;
+  padding: 7px ;
+  font-size: 15px ;
 }
 .btn-order-once{
-  padding: 5px !important;
-  font-size: 15px !important;
+  padding: 5px ;
+  font-size: 15px ;
 }
+
+.card-slider{
+  margin-bottom: 40px;
 }
+
+.slider-container{
+  width: 80%;
+}
+
+.weekly-plan-selector {
+  text-align: center;
+  padding: 30px 0;
+}
+.section-title, .section-subtitle {
+  text-align: center;
+}
+.slider-container {
+  text-align: center;
+}
+.plan-card {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.dish-info {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.card {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.card-image {
+  width: 40%;
+}
+.nutrition-info2 {
+  margin-left: 320px;
+  justify-content: center;
+
+}
+
+.nutrition-info2 span {
+  margin: 10px;
+
+}
+
+.info-list h3{
+  margin-top: 10px;
+  white-space: nowrap;
+  margin-left: -130px;
+}
+
+.info-list h2 {
+  font-size: 40px;
+  margin-top: 10px;
+  white-space: nowrap;
+  margin-left: -70px;
+}
+
+.info-list p {
+  font-size: 22px !important;
+  margin-top: 10px;
+  margin-left: -140px;
+  white-space: nowrap;
+}
+
+.info-list ul li{
+  text-align: left;
+  margin-left: -70px;
+  
+}
+
+}
+
+
+
 
 @media (max-width: 768px) {
   .weekly-plans-title {
@@ -695,6 +1044,39 @@ input[type="range"]::-webkit-slider-thumb {
     padding: 5px !important;
     font-size: 12px !important;
   }
+  .weekly-plan-selector {
+    padding: 20px 0;
+  }
+  .section-title {
+    font-size: 30px;
+  }
+  .section-subtitle {
+    font-size: 20px;
+  }
+  .slider-container input[type="range"] {
+    width: 100%;
+  }
+  
+  .dish-info {
+    flex-direction: column;
+  }
+  .card {
+    padding: 15px;
+  }
+  .top_card h2 {
+    font-size: 22px;
+  }
+  .nutrition-info2 {
+    font-size: 14px;
+  }
+  .info-list h2 {
+    font-size: 22px;
+  }
+  
+  .info-list p {
+    font-size: 15px !important;
+  }
+  
 }
 
 @media (max-width: 576px) {
