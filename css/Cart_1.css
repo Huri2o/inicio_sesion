@@ -434,6 +434,12 @@ body-Cart{
     transition: transform 0.3s;
     padding-top: 1rem;
 }
+.dish-image_1 {
+    width: 78%;
+    margin: 0 auto;
+    transition: transform 0.3s;
+    padding-top: 1rem;
+}
 
 .dish-card:hover .dish-image {
     transform: scale(1.05);
