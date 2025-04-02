@@ -1,7 +1,7 @@
 /* styles.css */
 /* Primero, asegúrate de que la imagen de fondo tenga un z-index bajo */
 body, html {
-  background-image: url('../images/homepage_img/imagenes\ negras.png');
+  background-image: url('../assets/images/homepage_img/imagenes\ negras.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

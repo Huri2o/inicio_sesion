@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Enlazar el archivo CSS personalizado -->
-  <link href="../assets/css/homepage.css" rel="stylesheet">
+  <link href="../css/homepage.css" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
@@ -21,7 +21,7 @@
       <div class="container">
         <!-- Logo -->
         <img src="../assets/images/homepage_img/logo4-removebg-preview.png" alt="Logo" class="logoa">
-        <a class="navbar-brand" href="#">Komi</a>
+        <a class="navbar-brand" href="index.php">Komi</a>
 
         <!-- Menú de navegación -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -30,19 +30,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto"> <!-- mx-auto centra el menú -->
             <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link active" href="inicio.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Menu</a>
+              <a class="nav-link" href="inicio.php">Products</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Guide</a>
+              <a class="nav-link" href="inicio.php">Subscription</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Assistant</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Wiki</a>
+              <a class="nav-link" href="inicio.php">History</a>
             </li>
           </ul>
 
@@ -75,60 +72,52 @@
             Been Easier.
           </p>
           <div class="hero-cta">
-            <a href="#" class="btn btn-custom btn-order">Order once</a>
+            <a href="inicio.php" class="btn btn-custom btn-order">Order once</a>
           </div>
         </div>
       </div>
     </div>
 </section>
     <!-- Sección de las cards -->
-<section class="cards-section">
-    <div class="container">
-      <div class="row">
-        <!-- Card 1: Market -->
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card-custom">
-            <div class="card-body">
-              <h2 class="card-title">Market</h2>
-              <p class="card-text">Looking for a specific product? We have it.</p>
-            </div>
-          </div>
-        </div>
+    <section class="cards-section">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="card-custom">
+                      <div class="card-body">
+                          <h2 class="card-title">Dishes</h2>
+                          <p class="card-text">Your choice, one or several dishes</p>
+                      </div>
+                  </div>
+              </div>
   
-        <!-- Card 2: Weekly Plans -->
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card-custom">
-            <div class="card-body">
-              <h2 class="card-title">Weekly Plans</h2>
-              <p class="card-text">Your diet will be fabulous thanks to our experts.</p>
-            </div>
-          </div>
-        </div>
+              <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="card-custom">
+                      <div class="card-body">
+                          <h2 class="card-title">Subscription</h2>
+                          <p class="card-text">Your diet will be fabulous thanks to our experts.</p>
+                      </div>
+                  </div>
+              </div>
   
-        <!-- Card 3: Meal Kits -->
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card-custom">
-            <div class="card-body">
-              <h2 class="card-title">Meal Kits</h2>
-              <p class="card-text">Want to try something new? Our special kits are for you.</p>
-            </div>
+              <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="card-custom">
+                      <div class="card-body">
+                          <h2 class="card-title">Meal Kits</h2>
+                          <p class="card-text">We give you the ingredients, you do it</p>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-  
+      </div>
+  </section>
         <!-- Card 4: Wiki -->
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card-custom">
-            <div class="card-body">
-              <h2 class="card-title">Wiki</h2>
-              <p class="card-text">Calories, recipes, or tips for any dish or ingredient? BINGO.</p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>
   <div class="imagen_pre">
-    <img src="../assets/images/homepage_img/PRE-View.png">
+    <img src="../assets/images/homepage_img/preview.jpg">
   </div>
    
 <!-- Sección de "Weekly Plans" -->
@@ -148,12 +137,12 @@
                   <li>Your dishes will arrive wherever you are, totally fresh in a single delivery.</li>
                 </ul>
                 <div class="weekly-plans-buttons">
-                    <a href="#" class="btn btn-custom btn-subscribe">Subscribe</a>
-                    <a href="#" class="btn btn-custom btn-order-once">Order once</a>
+                    <a href="inicio.php" class="btn btn-custom btn-subscribe">Subscribe</a>
+                    <a href="inicio.php" class="btn btn-custom btn-order-once">Order once</a>
                 </div>
             </div>
             <!-- Imagen de la sección (opcional) -->
-            <div class="col-lg-6 p-0"> <!-- Añadimos p-0 para quitar el padding -->
+            <div class="col-lg-6  p-0"> <!-- Añadimos p-0 para quitar el padding -->
               <h2 class="weekly-plans-title">Weekly Plans</h2>
               <img src="../assets/images/homepage_img/bola_verde_arriba_de_Weekly Plan.svg" alt="Weekly Plans" class="img-fluid weekly-plans-image">
           </div>
@@ -169,26 +158,32 @@
                 <h2 class="section-title">Choose your <span>Weekly Plan</span></h2>
                 <p class="section-subtitle">Select the number of dishes</p>
 
-                <!-- Slider -->
-                <div class="slider-container">
-                    <input type="range" id="dishRange" min="5" max="20" value="8" step="1" oninput="updatePlan()">
-                    <span id="dishCount">8</span>
+                <div class="card-slider">
+                    <div class="card-content1">
+                        <!-- Slider -->
+                        <div class="slider-container">
+                          <span5>5</span5>
+                            <input type="range" id="dishRange" min="5" max="20" value="8" step="1" oninput="updatePlan()">
+                            <span id="dishCount">8</span>
+                          <span20>20</span20>
+                        </div>
+                
+                        <p class="slider-info">Choose the dishes you want to receive each week.</p>
+                    </div>
                 </div>
-
-                <p class="slider-info">Choose the dishes you want to receive each week.</p>
-            </div>
+              </div>
 
             <!-- Columna derecha: Card -->
-            <div class="col-lg-4">
-                <div class="plan-card">
-                    <h3><span id="dishCountCard">8</span> Dishes</h3>
-                    <p id="monthlyPrice">$52.00 / month</p>
-                    <p2 id="dishPrice">$7.00 / Dish</p2>
-                    <hr>
-                    <button class="btn-order">Order once</button>
-                </div>
-            </div>
-        </div>
+              <div class="col-lg-4">
+                  <div class="plan-card">
+                      <h3><span id="dishCountCard">8</span> Dishes</h3>
+                      <p id="monthlyPrice">$52.00 / month</p>
+                      <p2 id="dishPrice">$7.00 / Dish</p2>
+                      <hr>
+                      <button href="inicio.php" class="btn-order ">Order once</button>
+                  </div>
+              </div>
+        
     </div>
 </section>
 
