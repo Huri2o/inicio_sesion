@@ -51,7 +51,7 @@
 
         <a class="forgot-password" href="#">Forgot your password?</a>
 
-        <button href="D_products.html" type="submit" class="btn-submit">Sign up</button>
+        <a href="D_products.html" type="submit" class="btn-submit">Sign up</a>
       </form>
 
       <p class="continue-text">Or continue with</p>
