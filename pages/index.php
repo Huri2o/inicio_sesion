@@ -180,7 +180,7 @@
                       <p id="monthlyPrice">$52.00 / month</p>
                       <p2 id="dishPrice">$7.00 / Dish</p2>
                       <hr>
-                      <button href="inicio.php" class="btn-order ">Order once</button>
+                      <a href="inicio.php" class="btn-order ">Order once</a>
                   </div>
               </div>
         
@@ -218,7 +218,7 @@
         <span id="quantity">1</span>
         <button onclick="changeQuantity(1)">+</button>
       </div>
-      <button class="add-to-cart">ADD TO CART - $6</button>
+      <a class="add-to-cart">ADD TO CART - $6</a>
     </div>
   </div>
   <div class="info-list">

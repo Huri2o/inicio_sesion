@@ -145,24 +145,29 @@
     text-decoration: underline;
   }
   
-  /* Botón de enviar */
-  .btn-submit {
-    background-color: #2E7D61; /* Color principal */
-    color: #fff;
-    border: none;
-    padding: 12px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    border-radius: 35px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    width: 45%;
-  }
-  
-  .btn-submit:hover {
-    background-color: #2a7158; /* tono más oscuro al pasar el ratón */
-  }
+/* Botón de enviar */
+.btn-submit {
+  background-color: #2E7D61; /* Color principal */
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 35px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 45%;
+  text-align: right; /* Centra el texto dentro del botón */
+  display: inline-block; /* Asegura que se comporta correctamente */
+  text-decoration: none; /* Elimina el subrayado si es un enlace */
+}
+
+.btn-submit:hover {
+  background-color: #2a7158; /* tono más oscuro al pasar el ratón */
+}
+
+
   
   /* Texto para continuar con redes sociales */
   .continue-text {

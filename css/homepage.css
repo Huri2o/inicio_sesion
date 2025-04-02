@@ -376,12 +376,12 @@ z-index: 1; /* Colocamos la imagen detrás del contenido */
 }
 
 .btn-subscribe {
-  background-color: #2E7D61; /* Color de fondo para el botón Subscribe */
+  background-color: #000; /* Color de fondo para el botón Subscribe */
   color: #ffffff;
 }
 
 .btn-order-once {
-  background-color: #000000; /* Color de fondo para el botón Order once */
+  background-color: #2E7D61; /* Color de fondo para el botón Order once */
   color: #ffffff;
 }
 
