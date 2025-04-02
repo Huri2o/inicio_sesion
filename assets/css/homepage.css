@@ -8,6 +8,13 @@ body, html {
   background-attachment: scroll;
   position: relative; /* Necesario para que el z-index funcione */
   z-index: 1; /* Un valor bajo para estar detrás de todo */
+  
+}
+
+@media (max-width: 1024px) {
+  body, html {
+    background-image: none;
+  }
 }
 
 /* Para las secciones principales, usa fondos con transparencia */
@@ -40,8 +47,14 @@ body, html {
 .imagen_pre {
   display: flex;
   justify-content: center;
-  
+  padding: 40px;
 }
+
+.imagen_pre img {
+  width: 70%; /* La imagen ocupará el 50% del ancho del contenedor padre (.imagen_pre) */
+  height: auto;
+}
+
 header {
     position: relative;
     z-index: 3; /* Asegúrate de que sea mayor que el z-index de las imágenes */
@@ -52,7 +65,6 @@ header {
 }
 .navbar-custom {
     background-color: #F0FFEA; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
   }
 
   .navbar-toggler {
@@ -222,7 +234,7 @@ header {
 
 /* Estilos para la sección de las ds */
 .cards-section {
-   
+  
     padding: 40px 0; /* Espaciado interno (opcional) */
   }
 
@@ -259,6 +271,7 @@ header {
   background-color: #ffffff;
   text-align: center;
   overflow: hidden; /* Evita cortes en la imagen */
+  margin-left: 70px;
 }
 
 .weekly-plans-title {
@@ -267,6 +280,7 @@ header {
   font-weight: 600;
   color: #000000;
   margin-bottom: 30px;
+  margin-left: 260px;
   position: relative;
   z-index: 2;
 }
@@ -286,7 +300,7 @@ position: absolute; /* Posicionamos la imagen de forma absoluta */
 top: 0;
 right: 0;
 height: 100%; /* La imagen ocupará toda la altura de la sección */
-width: auto; /* Ajustamos el ancho automáticamente */
+width: 35%; /* Ajustamos el ancho automáticamente */
 max-width: 50%; /* Limitamos el ancho al 50% del contenedor */
 object-fit: cover; /* Aseguramos que la imagen cubra el espacio sin distorsionarse */
 z-index: 1; /* Colocamos la imagen detrás del contenido */
@@ -298,19 +312,21 @@ z-index: 1; /* Colocamos la imagen detrás del contenido */
   color: #000000;
   text-align: left; /* Alineamos el subtítulo a la izquierda */
   margin-left: 30px;
+  margin-top: -30px;
+  margin-bottom: 30px;
 }
 
 .weekly-plans-list {
   list-style-type: none; /* Quita los bullets de la lista */
   margin-left: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   text-align: left; /* Alineamos la lista a la izquierda */
 }
 
 .weekly-plans-list-2 {
   list-style-type: none; /* Quita los bullets de la lista */
   margin-left: 350px;
-  margin-top: -180px;
+  margin-top: -190px;
   text-align: left; /* Alineamos la lista a la izquierda */
 }
 
@@ -351,6 +367,7 @@ z-index: 1; /* Colocamos la imagen detrás del contenido */
   color: #2E7D61; /* Color del ícono */
   font-size: 20px;
 }
+
 .weekly-plans-buttons {
   display: flex;
   gap: 20px; /* Espacio entre los botones */
@@ -394,54 +411,73 @@ z-index: 1; /* Colocamos la imagen detrás del contenido */
     text-align: left; /* Alineamos el subtítulo a la izquierda */
     padding: 10px;
 }
-
-.slider-container {
-    position: relative;
-    display: block; /* Cambiamos a block para que ocupe toda la anchura */
-    margin: 30px 0;
-    text-align: left; /* Alineamos el slider a la izquierda */
+/* Card Styling */
+.card-slider {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
 }
+
+/* Card Content */
+.card-content1 {
+  text-align: center;
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  display: block;
+  margin: 30px 0;
+  text-align: left;
+  margin-left: 8%;
+}
+
 
 .slider-container input[type="range"] {
-    width: 80%; /* Ajusta este valor según el tamaño que desees */
-    max-width: 400px; /* Opcional: Limita el ancho máximo */
+  width: 90%;
+  max-width: 400px;
 }
 
+/* Slider Styles */
 input[type="range"] {
-    width: 100%; /* Hacemos que el slider ocupe toda la anchura */
-    -webkit-appearance: none;
-    appearance: none;
-    height: 8px;
-    background: #2E7D61;
-    border-radius: 5px;
-    outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: #2E7D61;
+  border-radius: 5px;
+  outline: none;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #000;
-    border-radius: 50%;
-    cursor: pointer;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 15px;
+  background: #000;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
+/* Dish Count Indicator */
 #dishCount {
-    position: absolute;
-    top: -30px; /* Posición arriba del slider */
-    background: #000;
-    color: #fff;
-    padding: 3px 10px;
-    border-radius: 10px;
-    font-size: 19px;
-    transform: translateX(-50%); /* Centra el contador respecto al thumb */
+  position: absolute;
+  top: -30px;
+  background: #000;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 19px;
+  transform: translateX(-50%);
 }
 
+/* Slider Info */
 .slider-info {
-    text-align: left; /* Alineamos el texto a la izquierda */
-    font-size: 19px;
-    color: #333;
-    margin-top: 10px;
+  text-align: left;
+  font-size: 19px;
+  color: #333;
+  margin-top: 10px;
 }
 
 .plan-card {
@@ -805,10 +841,30 @@ input[type="range"]::-webkit-slider-thumb {
   .imagen_pre{
     display: none !important;
   }
-  .body{
-    background-image: none !important;
+  .weekly-plans-image{
+    display: none !important;
   }
+  .weekly-plans-title{
+    display: none !important;
+  }
+ .weekly-plans-title2{
+  display: block !important; 
+  font-size: 40px;
+  text-align: right;
+  margin-right: -25%;
+  margin-bottom: 70px;
+  
 }
+.weekly-plans-subtitle{
+  margin-right: -400px;
+  
+}
+
+.info-list{
+  margin-top: 150px;
+}
+}
+
 
 @media (max-width: 991.98px) {
   
@@ -825,32 +881,51 @@ input[type="range"]::-webkit-slider-thumb {
       display: none; /* Ocultamos las imágenes en pantallas pequeñas */
   }
   .btn-order{
-    padding: 7px !important;
-    font-size: 15px !important;
+    padding: 7px ;
+    font-size: 15px ;
   }
   .weekly-plans-image{
-    display: none !important;
+    display: none ;
   }
   .weekly-plans-title{
-    display: none !important;
+    display: none ;
   }
  .weekly-plans-title2{
-  display: block !important; 
+  display: block ; 
   font-size: 40px;
+  text-align: left;
+  margin-left: 31%;
  }
  .weekly-plans-subtitle{
-  font-size: 22px !important;
+  font-size: 22px ;
+  width: 600px;
  }
+
  .weekly-plans-list li {
   font-size: 16px;
 }
+
+.weekly-plans-list-2 li {
+  font-size: 16px;
+  
+}
+
+
 .btn-subscribe{
-  padding: 7px !important;
-  font-size: 15px !important;
+  padding: 7px ;
+  font-size: 15px ;
 }
 .btn-order-once{
-  padding: 5px !important;
-  font-size: 15px !important;
+  padding: 5px ;
+  font-size: 15px ;
+}
+
+.card-slider{
+  margin-bottom: 40px;
+}
+
+.slider-container{
+  width: 80%;
 }
 
 .weekly-plan-selector {
@@ -883,18 +958,38 @@ input[type="range"]::-webkit-slider-thumb {
 .nutrition-info2 {
   margin-left: 320px;
   justify-content: center;
+
 }
 
 .nutrition-info2 span {
   margin: 10px;
+
+}
+
+.info-list h3{
+  margin-top: 10px;
+  white-space: nowrap;
+  margin-left: -130px;
 }
 
 .info-list h2 {
   font-size: 40px;
+  margin-top: 10px;
+  white-space: nowrap;
+  margin-left: -70px;
 }
 
 .info-list p {
   font-size: 22px !important;
+  margin-top: 10px;
+  margin-left: -140px;
+  white-space: nowrap;
+}
+
+.info-list ul li{
+  text-align: left;
+  margin-left: -70px;
+  
 }
 
 }
@@ -1010,3 +1105,4 @@ input[type="range"]::-webkit-slider-thumb {
     max-width: 45%;
   }
 }
+
