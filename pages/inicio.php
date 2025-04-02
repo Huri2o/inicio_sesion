@@ -51,7 +51,7 @@
 
         <a class="forgot-password" href="#">Forgot your password?</a>
 
-        <button type="submit" class="btn-submit">Sign up</button>
+        <button href="D_products.html" type="submit" class="btn-submit">Sign up</button>
       </form>
 
       <p class="continue-text">Or continue with</p>
@@ -62,7 +62,6 @@
         <button class="social-btn google">Google</button>
       </div>
 
-      <p class="login-text">Have an Account? <a href="#">Sign in</a></p>
     </div>
     <!-- Fin de la card -->
   </div>

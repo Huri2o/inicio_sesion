@@ -1,5 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<style>
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header .now {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+        
+        .header .enjoy {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+        
+        .card {
+            background-color: #2d8e6e;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .card-content {
+            flex: 1;
+        }
+        
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .card p {
+            font-size: 0.9rem;
+        }
+        
+        .card-image {
+            width: 120px;
+            text-align: center;
+        }
+        
+        .card-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .food-image-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .food-image {
+            flex: 1;
+        }
+        
+        .food-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .adapted-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .blocks-image {
+            margin-bottom: 10px;
+            width: 80px;
+        }
+        
+        .adapted-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        
+        .adapted-text p {
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+        .subscribe-button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .subscribe-button {
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .bubble {
+            background-color: white;
+            border-radius: 15px;
+            padding: 8px;
+            font-size: 0.8rem;
+            position: relative;
+            margin-left: 10px;
+        }
+        
+        .bubble:after {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent white transparent transparent;
+        }
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +161,9 @@
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
+
 
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full" data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full" class="mini-sidebar">
       
@@ -204,8 +349,65 @@
 
 
 
+
+        
       <div class="page-wrapper">
-    </div>
+
+        <div class="container">
+          <div class="header">
+              <h1>¡Suscribe <span class="now">Now</span> And <span class="enjoy">Enjoy</span> Our <span class="enjoy">Food</span>!</h1>
+          </div>
+          
+          <div class="card">
+              <div class="card-content">
+                  <h2>Place your first order and <strong>we'll take care of the rest.</strong></h2>
+                  <p>Choose your dishes one, and every week we will prepare a menu for you, which you can modify.</p>
+              </div>
+              <div class="card-image">
+                  <img src="/api/placeholder/120/120" alt="Person with laptop and bubble saying 'Chill!'">
+                  <div class="bubble">Chill!</div>
+              </div>
+          </div>
+          
+          <div class="food-image-card">
+              <div class="food-image">
+                  <img src="/api/placeholder/400/200" alt="Delicious meal with vegetables and meat">
+              </div>
+              <div class="adapted-content">
+                  <div class="blocks-image">
+                      <img src="/api/placeholder/80/60" alt="ABC blocks">
+                  </div>
+                  <div class="adapted-text">
+                      <h3>Adapted</h3>
+                      <h3>To you</h3>
+                      <p>Every thursday a different menu with numerous options.</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="card">
+              <div class="card-content">
+                  <h2>Weekly Delivery, choose your <strong>delivery day</strong></h2>
+                  <p>Select the option that suits you best.</p>
+              </div>
+              <div class="card-image">
+                  <img src="/api/placeholder/120/120" alt="Person with calendar">
+              </div>
+          </div>
+          
+          <div class="subscribe-button-container">
+              <button class="subscribe-button">
+                  I want to subscribe! 
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 16 16 12 12 8"></polyline>
+                      <line x1="8" y1="12" x2="16" y2="12"></line>
+                  </svg>
+              </button>
+          </div>
+      </div>
+  
+      </div>
     </div>
     <script src="../js/D_products/jquery.min.js"></script>     
     <script src="../js/D_products/perfect-scrollbar.jquery.min.js"></script>
